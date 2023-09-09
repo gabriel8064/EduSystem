@@ -195,11 +195,7 @@ Registro de Alumnos</h1>
             </div>
             <div class="col-3">
              <label class="form-label">Genero</label>
-<<<<<<< HEAD
              <select class="form-select">
-=======
-             <select class="form-select" name="genero">
->>>>>>> 28da51eaaa89937c942bed933c967e2266c97beb
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
                
