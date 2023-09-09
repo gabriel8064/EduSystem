@@ -1,4 +1,3 @@
-
 <?php
 include('bad.php');
 
@@ -13,7 +12,7 @@ include('bad.php');
     
 
     if($filas){
-        header("Location:menuusuario.php");
+      header("Location: menuusuario.php?usuario=" . urlencode($usuario));
     }else {
         
         ?>

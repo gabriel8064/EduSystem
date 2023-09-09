@@ -66,9 +66,11 @@
                     <br/>
                     <br/>
                     <?php
-                    if($_POST['usuario'] =="gabriel01"){
+                    if($_GET['usuario'] =="gabriel01"){
                     ?>    
-                    <button class="btn btn-dark btn-lg"><img src="images/grupo.png">Gestión de Usuarios</button>
+                    <button class="btn btn-dark btn-lg"><img src="images/grupo.png"> 
+                    <a href="gestion_usuarios.php">Gestión de Usuarios</a>
+                    </button>
                     <?php
                     }
                     ?>

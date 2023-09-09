@@ -142,11 +142,7 @@ Registro de Alumnos</h1>
 
                 </div>
                 <div class="col-3">
-<<<<<<< HEAD
             <label for="numero" class="form-label">Piso</label>
-=======
-            <label for="numero" class="form-label">piso</label>
->>>>>>> 28da51eaaa89937c942bed933c967e2266c97beb
             <input type="text" name="piso" class="form-control">
               
 

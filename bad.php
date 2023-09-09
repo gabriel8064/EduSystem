@@ -1,6 +1,6 @@
 <?php
 
-$conexion= mysqli_connect("localhost","root","","edusystem");
+$conexion= mysqli_connect("localhost","root","","edusystem123");
 
 if(!$conexion)
 {
