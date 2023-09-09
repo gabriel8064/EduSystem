@@ -160,7 +160,6 @@ Registro de Alumnos</h1>
 
               </div>
               <div class="col-3">
-<<<<<<< HEAD
               <label for="Provincia" class="form-label">Telefono Contacto</label>
             <input type="text" name="telefono1" class="form-control">
 
@@ -168,15 +167,6 @@ Registro de Alumnos</h1>
               <div class="col-3">
               <label for="relacion" class="form-label">Relacion Contacto</label>
             <input type="text" name="relacion" class="form-control">
-=======
-              <label for="Provincia" class="form-label">Relacion Contacto</label>
-            <input type="text" name="relacion" class="form-control">
-
-              </div>
-              <div class="col-3">
-              <label for="relacion" class="form-label">Telefono Contacto</label>
-            <input type="text" name="telefono1" class="form-control">
->>>>>>> 28da51eaaa89937c942bed933c967e2266c97beb
              </div>
 
             </div>
