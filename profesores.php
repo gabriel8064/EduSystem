@@ -74,7 +74,7 @@
 <body>
 <h1 class="py-2"  align ="center" ><img src="images/profesor1.png"> Registro de Profesores</h1>
 
-<form class="container" method="post" action="insertprofesores.php" >
+<form class="container" method="post" action="insertprofesores1.php" >
 <div class="row align-items-star g-2">
         <div class="col-3 ">
             <label for="nombre" class="form-label" >Nombre</label>
@@ -160,13 +160,14 @@
           </div>
           <div class="col-3">
              <label class="form-label">Genero</label>
-             <select class="form-select">
+             <select class="form-select" name="genero">
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
                
                 
                 </select>
              </div>
+             
                 <div class="my-2">
             
               <button type="submit" name="alta1" class=" btn btn-danger btn-lg "><img class="img1" src="images/registro-en-linea1.png"> Registrar</button>

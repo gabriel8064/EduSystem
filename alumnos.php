@@ -76,7 +76,7 @@
     <h1 class="py-2"  align ="center"><img src="images/graduado.png">
 Registro de Alumnos</h1>
 
-    <form class="container" method="post" action="insertalumnos.php">
+    <form class="container" method="post" action="insertalumnos1.php">
     <div class="row g-2">
 
         <div class="col-3 ">
@@ -176,13 +176,13 @@ Registro de Alumnos</h1>
             <input type="text" name="fecha1" class="form-control">
              </div>
             <div class="col-3">
-            <label for="fecha de inscripcion" class="form-label">Fecha de Inscripcion</label>
-            <input type="text" name="fecha" class="form-control">
+            <label for="fecha de inscripcion" class="form-label">matricula</label>
+            <input type="text" name="matricula" class="form-control">
             </div>
             <div class="col-3">
             <div class="mb-3">
               <label class="form-label">Incripcion</label>
-              <select class="form-select" name="genero">
+              <select class="form-select" name="inscripcion">
                 <option value="pre-inscripto">Pre-inscripto</option>
                 <option value="inscripto">Inscripto</option>
                 <option value="cancelada">Cancelada</option>
@@ -195,7 +195,7 @@ Registro de Alumnos</h1>
             </div>
             <div class="col-3">
              <label class="form-label">Genero</label>
-             <select class="form-select">
+             <select class="form-select" name="genero">
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
                

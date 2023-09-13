@@ -1,10 +1,16 @@
 <?php
-include('bad.php');
+  include('bad.php');
 
-$sql = "SELECT pe.idpersona, pe.nombre,pe.nro_documento FROM alumnos al
-      INNER JOIN persona pe ON pe.idpersona = al.idpersona";
-$result = $conexion->query($sql);
+  $sql = "SELECT pe.id_persona, pe.apellido,pe.nombre,pe.nro_documento,al.id_alumno FROM alumno al 
+  INNER JOIN persona pe ON pe.id_persona = al.id_persona";
+  $result = $conexion->query($sql);
+
+  $sql = "SELECT pe.idpersona, pe.nombre FROM profesor pr
+        INNER JOIN persona pe ON pe.idpersona = pr.idpersona";
+  $result2 = $conexion->query($sql);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +78,7 @@ button {
 <div class="row">
     <div class="col-3 offset-3 ">
    <label class="form-label">Fecha de Asistencia</label>
-   <input type="text" class="form-control" name="fecha1">
+   <input type="date" class="form-control" name="fecha1">
     </div>
     <div class="col-3 ">
    <label class="form-label">Estado de asistencia</label>
@@ -83,20 +89,22 @@ button {
                 <option value="cancelada">Injustificado</option>
 
               </select>
-              <?php
-       echo '<select name="alumno" class="form-select">'; // Nombre del select
 
+    <?php
+       echo '<select name="alumno" class="form-select">'; // Nombre del select
        while ($row = $result->fetch_assoc()) {
-           $id = $row['idpersona']; // Cambia 'id' por el nombre de la columna que contiene el ID
-           $nombre = $row['nombre']; // Cambia 'nombre' por el nombre de la columna que contiene el nombre
-           $dni = $row['nro_documento'];
-           echo '<option value="' . $id . '">' . $nombre . '</option>';
-       }
-   
+        $id = $row['id_alumno']; // Cambia 'id' por el nombre de la columna que contiene el ID
+        $nombre = $row['apellido']; // Cambia 'nombre' por el nombre de la columna que contiene el nombre
+        $apellido = $row['nombre'];
+        $dni = $row['nro_documento'];
+        echo '<option value="' .  $id. '">'  .$apellido .' '.$nombre.' ('.$dni.')'. '</option>';
+     
+    }
+      
+       
        echo '</select>';
     
     ?>
-
 
               <div class="row">
               <div class="col-3 offset-3 ">

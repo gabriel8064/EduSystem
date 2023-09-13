@@ -1,3 +1,11 @@
+<?php
+  include('bad.php');
+
+  $sql = "SELECT pe.id_persona, pe.apellido,pe.nombre,pe.nro_documento,pr.id_profesor FROM profesor pr 
+  INNER JOIN persona pe ON pe.id_persona = pr.id_persona";
+  $result2 = $conexion->query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +48,20 @@ button {
     margin-top: 50px;
     width: 100px  
 }
+.bad1 {
+            margin-bottom:0px;
+            margin-top: 40px;
+             font-size: medium;
+             text-align:center;
+             width:400px;
+            height: 15px;
+             margin-left: -10px;
+            height: 50px;
+             padding-top: 12px;
+             
+              background-color: #a22;
+             color: #fff
+        }
  
 </style>
 <body>
@@ -52,7 +74,7 @@ button {
     </div>
     <div class="col-3 ">
    <label class="form-label">Estado de asistencia</label>
-   <select class="form-select">
+   <select class="form-select" name="estado">
                 <option value="presente">Presente</option>
                 <option value="ausente">Ausente</option>
                 <option value="cancelada">Justificado</option>
@@ -60,9 +82,24 @@ button {
 
               </select>
 
+              <?php
+       echo '<select name="profesor" class="form-select">'; // Nombre del select
+
+       while ($row = $result2->fetch_assoc()) {
+           $id = $row['id_profesor']; // Cambia 'id' por el nombre de la columna que contiene el ID
+           $apellido = $row['apellido']; // Cambia 'nombre' por el nombre de la columna que contiene el nombre
+          $nombre = $row['nombre'];
+          $dni = $row['nro_documento'];
+          echo '<option value="' .  $id. '">'  .$apellido .' '.$nombre.' ('.$dni.')'. '</option>';
+       }
+   
+       echo '</select>';
+    
+    ?>
+
               <div class="row">
               <div class="col-3 offset-3 ">
-                 <button  class="btn btn-danger btn-lg ">
+                 <button type="submit" class="btn btn-danger btn-lg " name="alta" >
                   Alta
                  </button>
                  <button  class="btn btn-danger btn-lg offset-3 ms-4" >
