@@ -78,7 +78,7 @@ button {
 <div class="row">
     <div class="col-3 offset-3 ">
    <label class="form-label">Fecha de Asistencia</label>
-   <input type="date" class="form-control" name="fecha1">
+   <input type="text" class="form-control" name="fecha1">
     </div>
     <div class="col-3 ">
    <label class="form-label">Estado de asistencia</label>

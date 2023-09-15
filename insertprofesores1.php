@@ -21,7 +21,7 @@ if(isset($_POST['alta1']))
    $categoria = $_POST['categoria'];
    $telefono = $_POST['telefono'];
    $fecha1 = $_POST['fecha1'];
-   $fecha1 = $_POST['fecha2'];
+   $fecha2 = $_POST['fecha2'];
    $calle = $_POST['calle'];
    $numero = $_POST['numero'];
    $departamento = $_POST['departamento'];
@@ -31,7 +31,7 @@ if(isset($_POST['alta1']))
    $estado = $_POST['estado'];
    $piso = $_POST['piso'];
   
-  $result=$conexion->query("INSERT INTO persona (apellido,nombre,fecha_nac,telefono,nro_documento) VALUES ('".$_POST["apellido"]."','".$_POST["nombre"]."','".$_POST['fecha']."','".$_POST['telefono']."','".$_POST['dni']."')");
+  $result=$conexion->query("INSERT INTO persona (apellido,nombre,fecha_nac,telefono,nro_documento) VALUES ('".$_POST["apellido"]."','".$_POST["nombre"]."','".$fecha."','".$_POST['telefono']."','".$_POST['dni']."')");
   if(!$result){  
     echo "Error en la consulta1: " . mysqli_error($conexion);
   }
@@ -51,7 +51,7 @@ if(isset($_POST['alta1']))
   }
   $idcategoria=$conexion->insert_id;
   
-  $consulta="INSERT INTO profesor (fecha_inicio,fecha_receso,id_persona,id_profesor_estado,id_categoria) VALUES('".$_POST['fecha1']."','".$_POST['fecha2']."',".$idpersona.",".$idestado.",".$idcategoria.")";
+  $consulta="INSERT INTO profesor (fecha_inicio,fecha_receso,id_persona,id_profesor_estado,id_categoria) VALUES('".$fecha1."','".$fecha2."',".$idpersona.",".$idestado.",".$idcategoria.")";
   $result = $conexion->query($consulta);
   if(!$result){
     echo "Error en la consulta4: " . mysqli_error($conexion). " ". $consulta;

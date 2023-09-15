@@ -35,7 +35,7 @@ if(isset($_POST['alta']))
    $matricula = $_POST['matricula'];
    $fecha1= $_POST['fecha1'];
   
-  $result=$conexion->query("INSERT INTO persona (apellido,nombre,fecha_nac,telefono,nro_documento) VALUES ('".$_POST["apellido"]."','".$_POST["nombre"]."','".$_POST['fecha']."','".$_POST['telefono']."','".$_POST['dni']."')");
+  $result=$conexion->query("INSERT INTO persona (apellido,nombre,fecha_nac,telefono,nro_documento) VALUES ('".$_POST["apellido"]."','".$_POST["nombre"]."','".$fecha."','".$_POST['telefono']."','".$_POST['dni']."')");
   if(!$result){
     echo "Error en la consulta: " . mysqli_error($conexion);
   }

@@ -102,7 +102,7 @@ Registro de Alumnos</h1>
         <div class="row g-2">
           <div class="col-3">
             <label for="telefono" class="form-label">Fecha de Nacimiento</label>
-            <input type="text" name="fecha" class="form-control">
+            <input type="text" name="text" class="form-control">
 
           </div>
           
